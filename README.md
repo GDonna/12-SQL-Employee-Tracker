@@ -1,7 +1,7 @@
 # 12-SQL-Employee-Tracker
 
 ## 12 SQL Homework Challenge
-This is my submission for Chapter 14 Challenge.
+This is my submission for Chapter 12 Challenge.
 
 ## Here is the User Story
 
