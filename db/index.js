@@ -6,7 +6,8 @@ constructor(db) {this.connection = db;}
 findDepartments() {
     return this.connection.promise().query(
         `SELECT * FROM department`
-    );
+    ) 
+    .catch(err => console.log('Error in finding Departments', err));
 }
 findRoles() {
     return this.connection.promise().query(
@@ -21,7 +22,8 @@ findEmployees() {
 createDepartment(department) {
     return this.connection.promise().query(
         `INSERT INTO department SET ?`, department
-    );
+    )
+    .catch(err => console.log('Error in creating Department', err));
 }
 createRole(role) {
     return this.connection.promise().query(

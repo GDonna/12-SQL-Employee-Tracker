@@ -7,7 +7,7 @@ const db = mysql.createConnection(
       password: 'DNACode4$',
       database: 'employee_db'
     },
-    console.log(`Connected to the books_db database.`)
+    console.log(`Connected to the employee_db database.`)
   );
   
   db.connect(function(err) {
