@@ -34,3 +34,4 @@ THEN I am prompted to select an employee to update and their new role and this i
 ```
 ## Links
 Github: https://github.com/GDonna/12-SQL-Employee-Tracker.git
+Video: https://watch.screencastify.com/v/8JTECb0WhsIjF9ucJghD
