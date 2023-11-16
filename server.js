@@ -89,12 +89,12 @@ function addDepartment() {
   inquirer
     .prompt([{
       type: 'input',
-      name: 'department',
+      name: 'name',
       message: 'What is the name of the department?'
     }])
     .then(answer => {
-      db.createDepartment(answer.department)
-        .then(() => console.log(`Added ${answer.department} to the database`))
+      db.createDepartment(answer)
+        .then(() => console.log(`Added ${answer.name} to the database`))
         .then(() => startApp());
     });
 }

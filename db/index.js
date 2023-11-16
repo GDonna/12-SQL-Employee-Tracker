@@ -11,12 +11,12 @@ findDepartments() {
 }
 findRoles() {
     return this.connection.promise().query(
-        `SELECT * FROM role`
+        `SELECT * FROM role_table`
     );
 };
 findEmployees() {
     return this.connection.promise().query(
-        `SELECT * FROM employee`
+        `SELECT employee.first_name, employee.last_name, role_table.title, role_table.salary, department.name AS department, CONCAT(manager.first_name, ' ', manager.last_name) AS manager FROM employee LEFT JOIN role_table ON employee.role_id = role_table.id LEFT JOIN department ON role_table.department_id = department.id LEFT JOIN employee manager ON manager.id = employee.manager_id`
     );
 }
 createDepartment(department) {
@@ -27,7 +27,7 @@ createDepartment(department) {
 }
 createRole(role) {
     return this.connection.promise().query(
-        `INSERT INTO role SET ?`, role
+        `INSERT INTO role_table SET ?`, role
     );
 }
 createEmployee(employee) {
